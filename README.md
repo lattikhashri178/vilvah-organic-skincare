@@ -70,19 +70,6 @@ This project focuses on designing a Database Management System (DBMS) for **Vilv
 
 ---
 
-# 🚀 Upcoming Tasks
-
-- Week 3 – Entity Relationship (ER) Diagram
-- Week 4 – Relational Schema
-- Week 5 – SQL Table Creation
-- Week 6 – Data Insertion (Sample Records)
-- Week 7 – SQL Queries (CRUD Operations)
-- Week 8 – Advanced SQL Queries
-- Week 9 – Database Testing & Validation
-- Week 10 – Final Documentation & Project Presentation
-
----
-
 # 📂 Project Structure
 
 ```
