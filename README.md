@@ -2,10 +2,10 @@
 📖 Project Overview
 
 The Vilvah Database Management System (DBMS) is a database design project developed to efficiently manage the operations of Vilvah, a natural skincare and personal care brand. The project focuses on designing a structured relational database that stores and manages information related to customers, products, categories, suppliers, inventory, orders, payments, and administrators.
-
 The project follows a step-by-step database design approach, beginning with requirement analysis, followed by database design, and finally creating the Entity Relationship (ER) model before moving to SQL implementation.
 
 📅 Project Progress
+
 ✅ Week 1 – Project Analysis and Planning
 Activities Completed
 Selected the project topic (Vilvah DBMS)
@@ -26,6 +26,7 @@ Project Proposal
 Requirement Analysis
 Business Requirement Documentation
 Functional & Non-Functional Requirement Documentation
+
 ✅ Week 2 – Database Design
 Activities Completed
 Identified all database entities
@@ -51,6 +52,7 @@ Attribute Definition
 Primary & Foreign Key Design
 Relationship Design
 Cardinality Definition
+
 ✅ Week 3 – Entity Relationship (ER) Diagram
 Activities Completed
 Designed the Entity Relationship (ER) Diagram
