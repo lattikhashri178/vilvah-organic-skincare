@@ -1,66 +1,176 @@
-🌿 Vilvah Database Management System
+# 🌿 Vilvah - Database Management System (DBMS) Project
 
-A Database Management System (DBMS) project designed for Vilvah, an Indian natural skincare and personal care brand. The project focuses on designing a structured relational database to efficiently manage customers, products, suppliers, inventory, orders, payments, and administrative operations. The project follows a systematic database design approach from requirement analysis to ER modeling before SQL implementation.
+## 📖 Project Overview
 
-📌 Project Objectives
-Design a normalized relational database.
-Reduce data redundancy and improve data integrity.
-Model real-world business operations.
-Build a scalable database for future implementation.
+The **Vilvah DBMS Project** is a database design developed for **Vilvah**, a natural skincare and personal care brand. The project aims to design an efficient relational database that manages customers, products, categories, suppliers, inventory, orders, payments, and administrators while ensuring data integrity, consistency, and minimal redundancy.
 
-🚀 Project Progress
+---
 
-📖 Week 1 – Requirement Analysis
-Project Introduction
-Objectives
-Problem Statement
-Business Requirements
-Functional Requirements
-Non-Functional Requirements
-Stakeholder Analysis
+## 🎯 Objectives
 
-🗂️ Week 2 – Database Design
-Identified Database Entities
-Defined Attributes
-Assigned Data Types
-Created Primary Keys (PK)
-Created Foreign Keys (FK)
-Established Relationships
-Defined Cardinalities
+- Design a structured relational database for Vilvah.
+- Identify entities, attributes, primary keys, and foreign keys.
+- Define relationships between entities.
+- Develop an Entity Relationship (ER) Diagram.
+- Analyze functional dependencies.
+- Identify redundancy and data anomalies.
+- Apply normalization techniques to improve database efficiency.
 
-Entities
+---
 
-Customer
-Product
-Category
-Supplier
-Inventory
-Orders
-Order Details
-Payment
-Admin
+# 📅 Weekly Progress
 
-🔗 Week 3 – Entity Relationship Diagram
-Designed the ER Diagram
-Connected all entities
-Defined relationship mapping
-Validated cardinalities
-Prepared the database for SQL implementation
+## ✅ Week 1 – Project Analysis and Planning
 
-🛠️ Tools Used
-Draw.io
-MySQL
-Microsoft Word
-GitHub
-📂 Repository Structure
-📦 Vilvah-DBMS
-│── Week-1
-│── Week-2
-│── Week-3
-└── README.md
+### Tasks Completed
 
-📌 Current Status
-✅ Week 1 Completed
-✅ Week 2 Completed
-✅ Week 3 Completed
+- Project Topic Selection
+- Introduction
+- Objectives
+- Key Objectives
+- Motivation
+- Problem Statement
+- Business Requirements
+- Functional Requirements
+- Non-Functional Requirements
+- Stakeholders
+- E-Commerce Overview
+- Database Overview
+- Conclusion
+
+### Deliverables
+
+- Project Proposal
+- Requirement Analysis
+- Documentation
+
+---
+
+## ✅ Week 2 – Database Design
+
+### Tasks Completed
+
+- Identified Entities
+- Defined Attributes
+- Assigned Data Types
+- Identified Primary Keys (PK)
+- Identified Foreign Keys (FK)
+- Established Relationships
+- Defined Cardinality
+
+### Entities Designed
+
+- Customer
+- Product
+- Category
+- Supplier
+- Inventory
+- Orders
+- Order Details
+- Payment
+- Admin
+
+### Deliverables
+
+- Entity Analysis
+- Attribute Definition
+- Relationship Identification
+- Database Design Documentation
+
+---
+
+## ✅ Week 3 – Entity Relationship (ER) Diagram
+
+### Tasks Completed
+
+- Designed ER Diagram
+- Created Entity Diagrams
+- Added Attributes
+- Defined Primary Keys
+- Defined Foreign Keys
+- Created Relationship Diagram
+- Defined Cardinality (1:1, 1:M)
+
+### Deliverables
+
+- Complete ER Diagram
+- Relationship Diagram
+- Entity Diagrams
+
+---
+
+## ✅ Week 4 – Functional Dependency Analysis
+
+### Tasks Completed
+
+- Identified Functional Dependencies
+- Analyzed Attribute Dependencies
+- Performed Redundancy Analysis
+- Identified Data Anomalies
+  - Insert Anomaly
+  - Update Anomaly
+  - Delete Anomaly
+- Verified Database Normalization
+  - First Normal Form (1NF)
+  - Second Normal Form (2NF)
+  - Third Normal Form (3NF)
+
+### Deliverables
+
+- Functional Dependency Documentation
+- Redundancy Analysis Report
+- Data Anomaly Analysis
+- Normalization Report
+
+---
+
+# 🗂 Database Entities
+
+- Customer
+- Product
+- Category
+- Supplier
+- Inventory
+- Orders
+- Order Details
+- Payment
+- Admin
+
+---
+
+# 🛠 Technologies Used
+
+- DBMS Concepts
+- ER Modeling
+- Relational Database Design
+- Draw.io
+- dbdiagram.io
+
+---
+
+# 🚀 Future Enhancements
+
+- SQL Table Creation
+- SQL Queries (DDL & DML)
+- Stored Procedures
+- Triggers
+- Views
+- Indexing
+- Database Implementation
+
+---
+
+## 📌 Project Status
+
+✔ Week 1 Completed
+
+✔ Week 2 Completed
+
+✔ Week 3 Completed
+
+✔ Week 4 Completed
+
+---
+
+### 🌟 Stay tuned for the next phase of the Vilvah DBMS Project!
 
