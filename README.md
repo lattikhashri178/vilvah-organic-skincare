@@ -1,12 +1,12 @@
-# 🌿 Vilvah - Database Management System (DBMS) Project
+#  Vilvah - Database Management System (DBMS) Project
 
-## 📖 Project Overview
+##  Project Overview
 
 The **Vilvah DBMS Project** is a database design developed for **Vilvah**, a natural skincare and personal care brand. The project aims to design an efficient relational database that manages customers, products, categories, suppliers, inventory, orders, payments, and administrators while ensuring data integrity, consistency, and minimal redundancy.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Design a structured relational database for Vilvah.
 - Identify entities, attributes, primary keys, and foreign keys.
@@ -15,12 +15,15 @@ The **Vilvah DBMS Project** is a database design developed for **Vilvah**, a nat
 - Analyze functional dependencies.
 - Identify redundancy and data anomalies.
 - Apply normalization techniques to improve database efficiency.
+- Create Product and Category tables using Oracle SQL.
+- Perform product insertion, updating, and deletion.
+- Generate category-wise product reports.
 
 ---
 
-# 📅 Weekly Progress
+#  Weekly Progress
 
-## ✅ Week 1 – Project Analysis and Planning
+##  Week 1 – Project Analysis and Planning
 
 ### Tasks Completed
 
@@ -46,7 +49,7 @@ The **Vilvah DBMS Project** is a database design developed for **Vilvah**, a nat
 
 ---
 
-## ✅ Week 2 – Database Design
+## Week 2 – Database Design
 
 ### Tasks Completed
 
@@ -79,7 +82,7 @@ The **Vilvah DBMS Project** is a database design developed for **Vilvah**, a nat
 
 ---
 
-## ✅ Week 3 – Entity Relationship (ER) Diagram
+## Week 3 – Entity Relationship (ER) Diagram
 
 ### Tasks Completed
 
@@ -99,7 +102,7 @@ The **Vilvah DBMS Project** is a database design developed for **Vilvah**, a nat
 
 ---
 
-## ✅ Week 4 – Functional Dependency Analysis
+##  Week 4 – Functional Dependency Analysis
 
 ### Tasks Completed
 
@@ -124,53 +127,47 @@ The **Vilvah DBMS Project** is a database design developed for **Vilvah**, a nat
 
 ---
 
-# 🗂 Database Entities
+##  Week 5 – Product and Category Management System
 
-- Customer
-- Product
-- Category
-- Supplier
-- Inventory
-- Orders
-- Order Details
-- Payment
-- Admin
+### Tasks Completed
 
----
+- Designed Category Table
+- Designed Product Table
+- Defined Primary Key for Category
+- Defined Primary Key for Product
+- Defined Foreign Key relationship between Category and Product
+- Added database constraints
+- Inserted category records
+- Inserted product records
+- Performed product UPDATE operation
+- Performed product DELETE operation
+- Generated category-wise product report
+- Generated product details report
 
-# 🛠 Technologies Used
+### Category Entity
 
-- DBMS Concepts
-- ER Modeling
-- Relational Database Design
-- Draw.io
-- dbdiagram.io
+The Category table contains:
 
----
+- Category_ID
+- Category_Name
+- Category_Description
+- Status
 
-# 🚀 Future Enhancements
+### Product Entity
 
-- SQL Table Creation
-- SQL Queries (DDL & DML)
-- Stored Procedures
-- Triggers
-- Views
-- Indexing
-- Database Implementation
+The Product table contains:
 
----
+- Product_ID
+- Product_Name
+- Category_ID
+- Price
+- Stock
+- Supplier_ID
+- Weight
+- Ingredients
+- Skin_Type
+- Brand
+- Expiry_Date
 
-## 📌 Project Status
 
-✔ Week 1 Completed
-
-✔ Week 2 Completed
-
-✔ Week 3 Completed
-
-✔ Week 4 Completed
-
----
-
-### 🌟 Stay tuned for the next phase of the Vilvah DBMS Project!
 
