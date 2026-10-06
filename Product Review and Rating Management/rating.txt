@@ -1,0 +1,265 @@
+CREATE TABLE Rating (
+    Rating_ID NUMBER(10) PRIMARY KEY,
+    Customer_ID NUMBER(10) NOT NULL,
+    Product_ID NUMBER(10) NOT NULL,
+    Rating_Value NUMBER(1) NOT NULL,
+    Rating_Date DATE,
+
+    CONSTRAINT FK_RATING_CUSTOMER
+        FOREIGN KEY (Customer_ID)
+        REFERENCES Customer(Customer_ID),
+
+    CONSTRAINT FK_RATING_PRODUCT
+        FOREIGN KEY (Product_ID)
+        REFERENCES Product(Product_ID),
+
+    CONSTRAINT CHK_RATING_VALUE
+        CHECK (Rating_Value BETWEEN 1 AND 5)
+);
+Table created.
+SQL> INSERT INTO Product
+  2  VALUES (1002, 'Rose Face Cream', 1, 202, 399.00, '50g',
+  3          'Rose, Shea Butter', 'Dry Skin', 'Vilvah', DATE '2027-10-15');
+
+1 row created.
+ INSERT INTO Product
+  2  VALUES (1001, 'Aloe Vera Face Wash', 1, 201, 299.00, '100ml',
+  3          'Aloe Vera, Neem', 'All Skin Types', 'Vilvah', DATE '2027-09-20');
+
+1 row created.
+
+SQL> INSERT INTO Product
+  2  VALUES (1003, 'Coconut Hair Oil', 3, 203, 349.00, '200ml',
+  3          'Coconut Oil, Vitamin E', 'All Hair Types', 'Vilvah', DATE '2027-11-10');
+
+1 row created.
+
+SQL> INSERT INTO Product
+  2  VALUES (1004, 'Herbal Body Wash', 2, 204, 449.00, '250ml',
+  3          'Herbal Extracts, Aloe Vera', 'All Skin Types', 'Vilvah', DATE '2027-12-05');
+
+1 row created.
+
+SQL> INSERT INTO Product
+  2  VALUES (1005, 'Natural Lip Balm', 5, 205, 199.00, '10g',
+  3          'Beeswax, Coconut Oil', 'All Skin Types', 'Vilvah', DATE '2027-12-20');
+
+1 row created.
+
+SQL> INSERT INTO Product
+  2  VALUES (1006, 'Neem Face Pack', 7, 201, 279.00, '100g',
+  3          'Neem, Turmeric, Multani Mitti', 'Oily Skin', 'Vilvah', DATE '2027-10-25');
+
+1 row created.
+
+ INSERT INTO Product
+    VALUES (1007, 'Cucumber Moisturizer', 8, 202, 449.00, '100ml',
+            'Cucumber, Aloe Vera, Vitamin E', 'Normal Skin', 'Vilvah', DATE '2027-11-18');
+
+ row created.
+
+ INSERT INTO Product
+  2  VALUES (1008, 'Natural Face Cleanser', 9, 203, 329.00, '150ml',
+  3          'Aloe Vera, Green Tea', 'Combination Skin', 'Vilvah', DATE '2027-12-12');
+
+1 row created.
+
+ COMMIT;
+
+Commit complete.
+
+ SELECT Product_ID, Product_Name
+  2  FROM Product
+  3  ORDER BY Product_ID;
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+      1001
+Aloe Vera Face Wash
+
+      1002
+Rose Face Cream
+
+      1003
+Coconut Hair Oil
+
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+      1004
+Herbal Body Wash
+
+      1005
+Natural Lip Balm
+
+      1006
+Neem Face Pack
+
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+      1007
+Cucumber Moisturizer
+
+      1008
+Natural Face Cleanser
+
+
+8 rows selected.
+
+SQL> INSERT INTO Rating
+  2  VALUES (1, 1, 1001, 5, DATE '2026-09-20');
+
+1 row created.
+
+SQL> INSERT INTO Rating
+  2  VALUES (2, 2, 1002, 4, DATE '2026-09-21');
+
+1 row created.
+
+SQL> INSERT INTO Rating
+  2  VALUES (3, 3, 1003, 5, DATE '2026-09-22');
+
+1 row created.
+
+SQL> INSERT INTO Rating
+  2  VALUES (4, 4, 1004, 4, DATE '2026-09-23');
+
+1 row created.
+
+SQL> INSERT INTO Rating
+  2  VALUES (5, 5, 1005, 3, DATE '2026-09-24');
+
+1 row created.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> SELECT * FROM Rating;
+
+ RATING_ID CUSTOMER_ID PRODUCT_ID RATING_VALUE RATING_DA
+---------- ----------- ---------- ------------ ---------
+         1           1       1001            5 20-SEP-26
+         2           2       1002            4 21-SEP-26
+         3           3       1003            5 22-SEP-26
+         4           4       1004            4 23-SEP-26
+         5           5       1005            3 24-SEP-26
+
+ SQL> SELECT
+  2      Product_ID,
+  3      ROUND(AVG(Rating_Value), 2) AS Average_Rating
+  4  FROM Rating
+  5  GROUP BY Product_ID
+  6  ORDER BY Average_Rating DESC;
+
+PRODUCT_ID AVERAGE_RATING
+---------- --------------
+      1001              5
+      1003              5
+      1004              4
+      1002              4
+      1005              3
+
+SQL> SELECT
+  2      p.Product_ID,
+  3      p.Product_Name,
+  4      ROUND(AVG(r.Rating_Value), 2) AS Average_Rating
+  5  FROM Product p
+  6  JOIN Rating r
+  7      ON p.Product_ID = r.Product_ID
+  8  GROUP BY p.Product_ID, p.Product_Name
+  9  ORDER BY Average_Rating DESC;
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+AVERAGE_RATING
+--------------
+      1001
+Aloe Vera Face Wash
+             5
+
+      1003
+Coconut Hair Oil
+             5
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+AVERAGE_RATING
+--------------
+
+      1004
+Herbal Body Wash
+             4
+
+      1002
+Rose Face Cream
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+AVERAGE_RATING
+--------------
+             4
+
+      1005
+Natural Lip Balm
+             3
+
+ SQL> SELECT
+  2      p.Product_ID,
+  3      p.Product_Name,
+  4      ROUND(AVG(r.Rating_Value), 2) AS Average_Rating
+  5  FROM Product p
+  6  JOIN Rating r
+  7      ON p.Product_ID = r.Product_ID
+  8  GROUP BY p.Product_ID, p.Product_Name
+  9  HAVING AVG(r.Rating_Value) >= 4
+ 10  ORDER BY Average_Rating DESC;
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+AVERAGE_RATING
+--------------
+      1003
+Coconut Hair Oil
+             5
+
+      1001
+Aloe Vera Face Wash
+             5
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+AVERAGE_RATING
+--------------
+
+      1004
+Herbal Body Wash
+             4
+
+      1002
+Rose Face Cream
+
+PRODUCT_ID
+----------
+PRODUCT_NAME
+--------------------------------------------------------------------------------
+AVERAGE_RATING
+--------------
+             4
